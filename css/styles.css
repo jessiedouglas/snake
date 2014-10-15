@@ -1,0 +1,58 @@
+html, body, section, ul, li, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  padding: 20px;
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.snake-game {
+  margin: 0 auto;
+  border: 5px solid black;
+  width: 810px;
+}
+
+.row {
+  width: 800px;
+}
+
+.cell {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+
+.segment {
+  background-color: green;
+}
+
+.empty {
+  background-color: tan;
+}
+
+.apple {
+  background-color: red;
+}
