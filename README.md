@@ -1,13 +1,9 @@
 snake
 =====
 
+[Demo](http://jessiedouglas.github.io/snake)
+
 The classic arcade-style game. Uses Javascript with jQuery.
-
-#### Running This App
-
-1. `git clone` or download this repository
-
-2. Open the 'index.html' file in the browser (you can just drag and drop)
 
 #### Playing the Game
 
