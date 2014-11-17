@@ -5,16 +5,22 @@
     this.$el = $el;
     this.board = new SnakeGame.Board(40, 30);
     this.growCount = 0;
+		this.points = 0;
+		this.highScore = readCookie("snake");
 
     this.bindKeys();
     this.refreshInterval = setInterval(this.step.bind(this), 100);
   };
 
   View.KEY_DIRS = {
-    65: new SnakeGame.Coord(-1, 0),
-    87: new SnakeGame.Coord(0, -1),
-    68: new SnakeGame.Coord(1, 0),
-    83: new SnakeGame.Coord(0, 1)
+    65: new SnakeGame.Coord(-1, 0), //a
+		37: new SnakeGame.Coord(-1, 0), //left arrow
+    87: new SnakeGame.Coord(0, -1), //w
+		38: new SnakeGame.Coord(0, -1), //up arrow
+    68: new SnakeGame.Coord(1, 0), //d
+		39: new SnakeGame.Coord(1, 0), //right arrow
+    83: new SnakeGame.Coord(0, 1), //s
+		40: new SnakeGame.Coord(0, 1) //down arrow
   };
 
   View.prototype.bindKeys = function () {
@@ -33,6 +39,7 @@
     if (this.board.isEatingApple()) {
       this.board.snake.isGrowing = true;
       this.board.resetApple();
+			this.points += 100;
     } else if (this.growCount < 2 && this.board.snake.isGrowing){
       this.growCount += 1;
     } else {
@@ -41,7 +48,13 @@
     }
 
     if (this.board.isLost()) {
-      alert("YOU LOSE!");
+			this.$el.append('<div class="lost_background">');
+			this.$el.append('<div class="lost_modal">You lost :(');
+			this.$el.find("div.lost_modal").append('<a href="" class="restart">Restart');
+			
+			if (this.points > this.highScore) {
+				createCookie("snake", this.points, 1000);
+			}
       clearInterval(this.refreshInterval);
     } else {
       this.render();
@@ -55,7 +68,10 @@
     this.$el.html("");
     this.board.grid().forEach(function (row) {
       self.renderRow(row);
-    })
+    });
+		
+		this.$el.append('<div class="points">Score: ' + this.points);
+		this.$el.append('<div class="high_score">High Score: ' + this.highScore);
   };
 
   View.prototype.renderRow = function (row) {

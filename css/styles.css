@@ -5,6 +5,7 @@ html, body, section, ul, li, h1 {
   font: inherit;
   background: transparent;
   box-sizing: border-box;
+	color: inherit;
 }
 
 ul {
@@ -33,6 +34,7 @@ h1 {
   margin: 0 auto;
   border: 5px solid black;
   width: 810px;
+	position: relative;
 }
 
 .row {
@@ -55,4 +57,52 @@ h1 {
 
 .apple {
   background-color: red;
+}
+
+div.lost_background {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+div.lost_modal {
+	background: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	font-size: 30px;
+	width: 200px;
+	text-align: center;
+	z-index: 1000;
+	position: absolute;
+	top: 200px;
+	left: 280px;
+}
+
+a.restart {
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+div.points {
+	font-size: 30px;
+	font-weight: bold;
+	opacity: 0.5;
+	padding: 5px 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div.high_score {
+	font-weight: bold;
+	opacity: 0.5;
+	padding: 5px 10px;
+	position: absolute;
+	top: 30px;
+	left: 0;
 }
