@@ -36,6 +36,10 @@ h1 {
   text-align: center;
 }
 
+p.directions {
+	text-align: center;
+}
+
 .snake-game {
   margin: 0 auto;
   border: 5px solid black;
@@ -84,7 +88,7 @@ div.lost_modal {
 	z-index: 1000;
 	position: absolute;
 	top: 200px;
-	left: 250px;
+	left: 230px;
 }
 
 a.restart {
