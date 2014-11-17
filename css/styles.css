@@ -1,3 +1,9 @@
+@-webkit-keyframes colorPulse {
+	0% {color: red;}
+	50% {color: yellow;}
+	100% {color: blue;}
+}
+
 html, body, section, ul, li, h1 {
   margin: 0;
   padding: 0;
@@ -86,6 +92,13 @@ a.restart {
 	font-size: 20px;
 	font-weight: bold;
 	letter-spacing: 1px;
+}
+
+p.new_high_score {
+	-webkit-animation: colorPulse 2s infinite;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 div.points {

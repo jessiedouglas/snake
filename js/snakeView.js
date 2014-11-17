@@ -50,11 +50,14 @@
     if (this.board.isLost()) {
 			this.$el.append('<div class="lost_background">');
 			this.$el.append('<div class="lost_modal">You lost :(');
-			this.$el.find("div.lost_modal").append('<a href="" class="restart">Restart');
 			
 			if (this.points > this.highScore) {
 				createCookie("snake", this.points, 1000);
+				this.$el.find("div.lost_modal").append('<p class="new_high_score">&#x2605; New High Score! &#x2605;')
 			}
+			
+			this.$el.find("div.lost_modal").append('<a href="" class="restart">Restart');
+			
       clearInterval(this.refreshInterval);
     } else {
       this.render();
