@@ -79,12 +79,12 @@ div.lost_modal {
 	border-radius: 10px;
 	padding: 20px;
 	font-size: 30px;
-	width: 200px;
+	width: 300px;
 	text-align: center;
 	z-index: 1000;
 	position: absolute;
 	top: 200px;
-	left: 280px;
+	left: 250px;
 }
 
 a.restart {
