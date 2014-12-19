@@ -14,8 +14,6 @@ Features:
 
 #### Playing the Game
 
-1. Use the arrow keys or 'aswd' to change direction ('a' for left, 'w' for up, 'd' for right, 's' for down)
-
-2. Refresh the browser to play again
+Use the arrow keys or 'aswd' to change direction ('a' for left, 'w' for up, 'd' for right, 's' for down)
 
 Collaborators: [Benjy Hirsch](http://github.com/benjyhirsch)
